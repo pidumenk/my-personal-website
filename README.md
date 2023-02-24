@@ -3,9 +3,9 @@
 A simple website was built using such technologies like HTML, CSS and JavaScript.
 
 ## Preview
-![](https://github.com/pidumenk/my-personal-website/Demo.gif)
+![](https://github.com/pidumenk/my-personal-website/blob/master/Demo.gif)
 
-[See Live](https://pidumenk.de)
+[Live Version](https://pidumenk.de)
 
 ## License
 
