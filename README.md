@@ -12,7 +12,7 @@ This simple action uses the vanilla AWS CLI to sync a directory (either from you
 
 **`workflow.yml`** **Example**
 
-Place in a .yml file such as this one in your `.github/workflows` folder. 
+Place in a `.yml` file such as this one in your `.github/workflows` folder. 
 
 *The following example includes optimal defaults for a public static website:*
 
