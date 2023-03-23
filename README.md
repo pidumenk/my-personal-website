@@ -10,7 +10,7 @@ This simple action uses the vanilla AWS CLI to sync a directory (either from you
 
 # Usage
 
-`*workflow.yml*` *Example*
+**`workflow.yml`** **Example**
 
 Place in a .yml file such as this one in your `.github/workflows` folder. 
 
@@ -48,7 +48,7 @@ jobs:
 
 The following settings must be passed as environment variables as shown in the example. Sensitive information, especially `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`, should be set as encrypted secrets in setting of your GitHub repository — otherwise, they'll be public to anyone browsing your repository's source code and CI logs.
 
-For more details, please, refer to [S3-Sync](https://github.com/marketplace/actions/s3-sync).
+For more details, please, refer to the [S3-Sync](https://github.com/marketplace/actions/s3-sync).
 
 ## Preview
 
