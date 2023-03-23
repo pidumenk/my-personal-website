@@ -10,14 +10,16 @@ This simple action uses the vanilla AWS CLI to sync a directory (either from you
 
 # Usage
 
-workflow.yml Example
+`*workflow.yml*` *Example*
+
 Place in a .yml file such as this one in your `.github/workflows` folder. 
 
 *The following example includes optimal defaults for a public static website:*
-    1. `--acl public-read` makes your files publicly readable (make sure your bucket settings are also set to public).
-    2. `--follow-symlinks` won't hurt and fixes some weird symbolic link problems that may come up.
-    3. Most importantly, `--delete` permanently deletes files in the S3 bucket that are not present in the latest version of your repository/build.
-    4. *Optional tip:* If you're uploading the root of your repository, adding `--exclude '.git/*'` prevents your `.git` folder from syncing, which would expose your source code history if your project is closed-source. (To exclude more than one pattern, you must have one `--exclude` flag per exclusion. The single quotes are also important!)
+
+* `--acl public-read` makes your files publicly readable (make sure your bucket settings are also set to public).
+* `--follow-symlinks` won't hurt and fixes some weird symbolic link problems that may come up.
+* Most importantly, `--delete` permanently deletes files in the S3 bucket that are not present in the latest version of your repository/build.
+* *Optional tip:* If you're uploading the root of your repository, adding `--exclude '.git/*'` prevents your `.git` folder from syncing, which would expose your source code history if your project is closed-source. (To exclude more than one pattern, you must have one `--exclude` flag per exclusion. The single quotes are also important!)
 
 ```yaml
 name: Upload Website
