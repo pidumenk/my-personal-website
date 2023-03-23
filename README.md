@@ -19,13 +19,17 @@ Place in a .yml file such as this one in your `.github/workflows` folder.
 * `--acl public-read` makes your files publicly readable (make sure your bucket settings are also set to public).
 * `--follow-symlinks` won't hurt and fixes some weird symbolic link problems that may come up.
 * Most importantly, `--delete` permanently deletes files in the S3 bucket that are not present in the latest version of your repository/build.
-* *Optional tip:* If you're uploading the root of your repository, adding `--exclude '.git/*'` prevents your `.git` folder from syncing, which would expose your source code history if your project is closed-source. (To exclude more than one pattern, you must have one `--exclude` flag per exclusion. The single quotes are also important!)
+* **Optional tip:** If you're uploading the root of your repository, adding `--exclude '.git/*'` prevents your `.git` folder from syncing, which would expose your source code history if your project is closed-source. (To exclude more than one pattern, you must have one `--exclude` flag per exclusion. The single quotes are also important!)
 
 ```yaml
 name: Upload Website
 
 on:
   push:
+    branches:
+    - master
+
+  pull_request:
     branches:
     - master
 
