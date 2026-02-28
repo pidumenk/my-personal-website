@@ -10,27 +10,38 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://kit.fontawesome.com/b9425e0ac8.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Pavel Dumenko</title>
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Typed.js for typing animation -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <title>Pavel Dumenko | DevOps Engineer</title>
   </head>
   <body class="light" id="top">
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
     <header class="header center">
-      <h3 class="link"> #pidumenk</h3>
+      <h3 class="link header-logo">#pidumenk</h3>
 
       <nav class="nav center">
         <ul class="nav__list center">
           <li class="nav__list-item">
-            <a class="link link--nav" href="#qualification">Qualification</a>
+            <a class="link link--nav" href="#qualification">QUALIFICATION</a>
           </li>
           <li class="nav__list-item">
-            <a class="link link--nav" href="#achievements">Achievements</a>
+            <a class="link link--nav" href="#achievements">ACHIEVEMENTS</a>
           </li>
           <li class="nav__list-item">
-            <a class="link link--nav" href="#skills">Skills</a>
+            <a class="link link--nav" href="#certifications">CERTIFICATIONS</a>
           </li>
           <li class="nav__list-item">
-            <a class="link link--nav" href="#contact">Contact</a>
+            <a class="link link--nav" href="#skills">SKILLS</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#contact">CONTACT</a>
           </li>
         </ul>
 
@@ -51,78 +62,96 @@
     <main>
       <!-- About -->
       <div class="about center">
-        <div class="home__img">
+        <div class="home__img" data-aos="zoom-in" data-aos-duration="1000">
           <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <mask id="mask0" mask-type="alpha">
-                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547
+                130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775
+                97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666
                 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
             </mask>
             <g mask="url(#mask0)">
-                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346
+                165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403
+                129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028
                 -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                <image class="home__blob-img" x="4" y="12" href="./pictures/ava3-removebg-preview.png"/>
+                <image class="home__blob-img" x="-45" y="-25" href="./pictures/avatar-2.png"/>
+                <!-- <image class="home__blob-img" x="-45" y="-15" href="./pictures/avatar-1.png"/> -->
             </g>
         </svg>
         </div>
-        
-        <div class="greetings__name">
+
+        <div class="greetings__name" data-aos="fade-up" data-aos-delay="200">
           <h1>Hi, I am <span class="about__name">Pavel Dumenko</span></h1>
         </div>
-        <h2 class="about__role">DevOps Engineer</h2>
-        <p class="about__desc">
-          I'm an organized and methodical DevOps Engineer with 4+ years of experience installing, 
-          configuring and maintaining Linux OS, leveraging configuration management, CI/CD 
-          and DevOps processes. Currently based in Berlin (Germany).
+        <h2 class="about__role" data-aos="fade-up" data-aos-delay="400">
+          <span id="typed-role"></span>
+        </h2>
+        <p class="about__desc" data-aos="fade-up" data-aos-delay="600">
+          Senior DevOps Engineer and SRE with 7+ years of experience designing, securing, and operating cloud-native and
+          on-premises infrastructure. Proven track record in cost optimization, platform reliability, Kubernetes operations, and
+          Infrastructure as Code. Strong ownership mindset with experience leading cross-team initiatives, standardizing best
+          practices across engineering teams and raising overall infrastructure maturity.
         </p>
 
-        <div class="about__contact center">
-          <a href="./assets/CV.pdf" target="_blank">
-            <span class="btn btn--outline">Download CV</span>
-          </a>
+        <div class="about__contact center" data-aos="fade-up" data-aos-delay="800">
+          <div class="about__cta">
+            <a href="#qualification" class="btn btn--outline btn--primary">
+              <i class="fas fa-briefcase"></i>
+              <span>View Experience</span>
+            </a>
+            <!-- TODO: Replace href="#" with href="./assets/CV.pdf" when CV is ready -->
+            <a href="#" class="btn btn--outline btn--secondary" id="downloadCV">
+              <i class="fas fa-download"></i>
+              <span>Download CV</span>
+            </a>
+          </div>
 
-          <a
-            href="https://github.com/pidumenk"
-            aria-label="github"
-            class="link link--icon"
-          >
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
+          <div class="about__social">
+            <a
+              href="https://github.com/pidumenk"
+              aria-label="github"
+              class="link link--icon"
+              title="GitHub"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
 
-          <a
-            href="https://t.me/pidumenk"
-            aria-label="telegram"
-            class="link link--icon"
-          >
-          <i aria-hidden="true" class="fab fa-telegram"></i>
-          </a>
+            <a
+              href="https://t.me/pidumenk"
+              aria-label="telegram"
+              class="link link--icon"
+              title="Telegram"
+            >
+            <i aria-hidden="true" class="fab fa-telegram"></i>
+            </a>
 
-          <a
-            href="https://www.linkedin.com/in/pidumenk/"
-            aria-label="linkedin"
-            class="link link--icon"
-          >
-            <i aria-hidden="true" class="fab fa-linkedin"></i>
-          </a>
+            <a
+              href="https://www.linkedin.com/in/pidumenk/"
+              aria-label="linkedin"
+              class="link link--icon"
+              title="LinkedIn"
+            >
+              <i aria-hidden="true" class="fab fa-linkedin"></i>
+            </a>
 
-          <a
-            href="https://medium.com/@pidumenk"
-            aria-label="medium"
-            class="link link--icon"
-          >
-            <i aria-hidden="true" class="fab fa-medium"></i>
-          </a>
+            <a
+              href="https://medium.com/@pidumenk"
+              aria-label="medium"
+              class="link link--icon"
+              title="Medium"
+            >
+              <i aria-hidden="true" class="fab fa-medium"></i>
+            </a>
+          </div>
         </div>
       </div>
 
       <!-- Qualification-->
       <section id="qualification" class="qualification section">
         <h2 class="section__title">Qualification</h2>
-        <span class="section__subtitle-qual">My personal journey</span>
-        
+        <span class="section__subtitle-qual">My Professional Journey & Educational Background</span>
+
         <div class="qualification__container container">
           <div class="qualification__tabs">
             <div class="qualification__button button--flex" data-target="#education">
@@ -142,14 +171,14 @@
               <!-- Qualification 1 -->
               <div class="qualification__data">
                 <div>
-                  <h3 class="qualification__title">Bachelor in Infocommunication technologies and networks</h3>
-                  <span class="qualification__subtitle">SPbGUT Bonch-Bruevich - St.Petersburg, Russia</span>
+                  <h3 class="qualification__title">B.Sc. in Infocommunication Technologies</h3>
+                  <span class="qualification__subtitle">Saint Petersburg State University of Telecommunications</span>
                   <div class="qualification__calendar">
                     <i aria-hidden="true" class="far fa-calendar"></i>
                     2014 - 2018
                   </div>
                 </div>
-                
+
                 <div>
                   <span class="qualification__rounder"></span>
                   <span class="qualification__line"></span>
@@ -166,8 +195,8 @@
                 </div>
 
                 <div>
-                  <h3 class="qualification__title">Master in Cybersecurity</h3>
-                  <span class="qualification__subtitle">SPbGUT Bonch-Bruevich - St.Petersburg, Russia</span>
+                  <h3 class="qualification__title">M.Sc. in Cybersecurity</h3>
+                  <span class="qualification__subtitle">Saint Petersburg State University of Telecommunications</span>
                   <div class="qualification__calendar">
                     <i aria-hidden="true" class="far fa-calendar"></i>
                     2018 - 2020
@@ -181,14 +210,14 @@
                 <!-- Qualification 1 -->
               <div class="qualification__data">
                 <div>
-                  <h3 class="qualification__title">System Engineer</h3>
-                  <span class="qualification__subtitle">Kaspersky Lab - Moscow, Russia</span>
+                  <h3 class="qualification__title">DevOps Engineer</h3>
+                  <span class="qualification__subtitle">Kaspersky - Moscow, Russia</span>
                   <div class="qualification__calendar">
                     <i aria-hidden="true" class="far fa-calendar"></i>
                     05.2020 - 07.2022
                   </div>
                 </div>
-                
+
                 <div>
                   <span class="qualification__rounder"></span>
                   <span class="qualification__line"></span>
@@ -224,7 +253,7 @@
                     09.2023 - 07.2024
                   </div>
                 </div>
-                
+
                 <div>
                   <span class="qualification__rounder"></span>
                   <span class="qualification__line"></span>
@@ -256,43 +285,21 @@
       
       <!-- ACHIEVEMENTS -->
       <section id="achievements" class="section projects">
-        <h2 class="section__title">Achievements</h2>
+        <h2 class="section__title" data-aos="fade-up">Achievements</h2>
 
         <div class="projects__grid">
-          <div class="project">
-            <h3>Certifications</h3>
-            <p class="project__description">
-              I'm a present Certified Kubernetes Administrator (CKA) and Certified Kubernetes Application Developer (CKAD). 
-              I've been running things on Linux for several years both on-premise and in the cloud.
-              Currently preparing to obtain my AWS Certified Solutions Architect - Associate Certification.
-            </p>
-            <ul class="project__stack">
-              <li class="project__stack-item">Kubernetes</li>
-              <li class="project__stack-item">Microservices</li>
-              <li class="project__stack-item">Linux</li>
-            </ul>
-
-            <a
-              href="https://www.credly.com/users/pavel-dumenko"
-              aria-label="live preview"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-            </a>
-          </div>
-
-          <div class="project">
+          <div class="project" data-aos="fade-up" data-aos-delay="100">
             <h3>Kaspersky</h3>
             <p class="project__description">
-              As a DevOps Engineer I provided and implemented a technical solution for testing ansible roles through Molecule (incl. Docker, Git, Ansible, Jenkins and Allure Framework).
-              Developed and put into practice CI/CD processes.
-              Built a fault tolerance solution for Jenkins and Grafana services.
-              Successfully migrated Grafana Nodes to a virtualization platform from a physical environment.
+              Kept critical infrastructure running reliably for 200+ Linux servers by automating operations end-to-end with Ansible and building fault-tolerant systems that eliminated single points of failure. 
+              Introduced automated testing for infrastructure code with Molecule, catching issues before they reached production and making deployments significantly safer. 
+              Designed and maintained CI/CD pipelines that gave engineering teams a faster, more dependable path to production — across Jenkins, Kubernetes, and OpenShift.
             </p>
             <ul class="project__stack">
               <li class="project__stack-item">Linux</li>
               <li class="project__stack-item">DevOps</li>
-              <li class="project__stack-item">Cybersecurity</li>
+              <li class="project__stack-item">Ansible</li>
+              <li class="project__stack-item">Security</li>
             </ul>
 
             <a
@@ -304,16 +311,16 @@
             </a>
           </div>
 
-          <div class="project">
-            <h3>N26 Bank</h3>
+          <div class="project" data-aos="fade-up" data-aos-delay="200">
+            <h3>N26</h3>
             <p class="project__description">
-              Being a part of the team, I successfully implemented a PaaS product (ServiceNow) into company infrastructure, where a key component is running in Kubernetes. 
-              Contributed in integrations with different SaaS applications like Onetrust, Hopex and Workday.
-              In collaboration with an InfraSec Team we are currently working on an integration solution between SIEM and ServiceNow systems.
+              Led the architectural integration of ServiceNow as a core PaaS solution, deploying mission-critical components within Kubernetes to ensure scalability and resilience. 
+              Orchestrated a seamless data ecosystem by engineering complex integrations with Workday, OneTrust, and Hopex, while collaborating with Security Operations to architect a unified SIEM-to-ServiceNow response framework. 
+              These initiatives centralized governance, automated cross-platform workflows, and significantly strengthened the organization’s security posture.
             </p>
             <ul class="project__stack">
               <li class="project__stack-item">SaaS</li>
-              <li class="project__stack-item">K8s</li>
+              <li class="project__stack-item">Kubernetes</li>
               <li class="project__stack-item">microservices</li>
               <li class="project__stack-item">REST API</li>
             </ul>
@@ -326,48 +333,108 @@
               <i aria-hidden="true" class="fas fa-external-link-alt"></i>
             </a>
           </div>
+
+          <div class="project" data-aos="fade-up" data-aos-delay="300">
+            <h3>Holidu</h3>
+            <p class="project__description">
+              Designed and delivered cloud infrastructure and security initiatives across AWS and Kubernetes environments. 
+              Implemented cross-account AWS secrets backup, real-time security hardening controls, and RDS compliance guardrails to reduce breach risk and meet audit standards. 
+              Automated technical onboarding and offboarding using AI-powered workflows, eliminating permission drift and manual overhead. 
+              Drove cost visibility improvements that reduced untagged cloud spend by 23% and enabled accurate internal cost attribution across teams.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">AWS</li>
+              <li class="project__stack-item">Kubernetes</li>
+              <li class="project__stack-item">Terraform</li>
+              <li class="project__stack-item">Cloud</li>
+            </ul>
+
+            <a
+              href="https://www.holidu.com/careers"
+              aria-label="live preview"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CERTIFICATIONS -->
+      <section id="certifications" class="section certifications">
+        <h2 class="section__title" data-aos="fade-up">Certifications</h2>
+
+        <div class="certifications__container" data-aos="fade-up" data-aos-delay="100">
+          <div class="certification__badge" data-aos="zoom-in" data-aos-delay="150">
+            <img src="./pictures/CKAD.png" alt="CKAD Certification" class="certification__image">
+            <h3 class="certification__title">CKAD</h3>
+            <p class="certification__description">Certified Kubernetes Application Developer</p>
+          </div>
+
+          <div class="certification__badge" data-aos="zoom-in" data-aos-delay="250">
+            <img src="./pictures/CKA.png" alt="CKA Certification" class="certification__image">
+            <h3 class="certification__title">CKA</h3>
+            <p class="certification__description">Certified Kubernetes Administrator</p>
+          </div>
+
+          <div class="certification__badge" data-aos="zoom-in" data-aos-delay="350">
+            <img src="./pictures/GitOps.png" alt="GitOps Fundamentals Certification" class="certification__image">
+            <h3 class="certification__title">GitOps Fundamentals</h3>
+            <p class="certification__description">GitOps Certification</p>
+          </div>
+        </div>
+
+        <div class="certifications__link" data-aos="fade-up" data-aos-delay="450">
+          <a href="https://www.credly.com/users/pavel-dumenko" class="btn btn--outline" target="_blank">
+            <i class="fas fa-external-link-alt"></i>
+            <span>View All Certifications</span>
+          </a>
         </div>
       </section>
 
       <!-- Skills -->
       <section class="section skills" id="skills">
-        <h2 class="section__title">Skills</h2>
-        <ul class="skills__list">
-          <li class="skills__list-item btn btn--plain">Linux</li>
-          <li class="skills__list-item btn btn--plain">Kubernetes</li>
-          <li class="skills__list-item btn btn--plain">CI/CD</li>
-          <li class="skills__list-item btn btn--plain">Jenkins</li>
-          <li class="skills__list-item btn btn--plain">Docker</li>
-          <li class="skills__list-item btn btn--plain">AWS</li>
-          <li class="skills__list-item btn btn--plain">IaC</li>
-          <li class="skills__list-item btn btn--plain">Git</li>
-          <li class="skills__list-item btn btn--plain">Ansible</li>
-          <li class="skills__list-item btn btn--plain">TCP/IP</li>
-          <li class="skills__list-item btn btn--plain">Grafana</li>
-          <li class="skills__list-item btn btn--plain">Nginx</li>
-          <li class="skills__list-item btn btn--plain">Icinga</li>
-          <li class="skills__list-item btn btn--plain">Prometheus</li>
-          <li class="skills__list-item btn btn--plain">Vault</li>
+        <h2 class="section__title" data-aos="fade-up">Skills</h2>
+        <ul class="skills__list" data-aos="fade-up" data-aos-delay="100">
+          <li class="skills__list-item btn btn--plain" data-aos="zoom-in" data-aos-delay="150">AWS</li>
+          <li class="skills__list-item btn btn--plain" data-aos="zoom-in" data-aos-delay="200">Kubernetes</li>
+          <li class="skills__list-item btn btn--plain" data-aos="zoom-in" data-aos-delay="300">Terraform</li>
+          <li class="skills__list-item btn btn--plain" data-aos="zoom-in" data-aos-delay="250">Jenkins</li>
+          <li class="skills__list-item btn btn--plain" data-aos="zoom-in" data-aos-delay="350">Docker</li>
+          <li class="skills__list-item btn btn--plain" data-aos="zoom-in" data-aos-delay="400">Helm</li>
+          <li class="skills__list-item btn btn--plain" data-aos="zoom-in" data-aos-delay="450">Linux</li>
+          <li class="skills__list-item btn btn--plain" data-aos="zoom-in" data-aos-delay="500">Ansible</li>
+          <li class="skills__list-item btn btn--plain" data-aos="zoom-in" data-aos-delay="350">Python</li>
+          <li class="skills__list-item btn btn--plain" data-aos="zoom-in" data-aos-delay="550">Git</li>
+          <li class="skills__list-item btn btn--plain" data-aos="zoom-in" data-aos-delay="550">GitHub Actions</li>
+          <li class="skills__list-item btn btn--plain" data-aos="zoom-in" data-aos-delay="800">ArgoCD</li>
+          <li class="skills__list-item btn btn--plain" data-aos="zoom-in" data-aos-delay="800">Nginx</li>
+          <li class="skills__list-item btn btn--plain" data-aos="zoom-in" data-aos-delay="650">Grafana</li>
+          <li class="skills__list-item btn btn--plain" data-aos="zoom-in" data-aos-delay="700">Prometheus</li>
+          <li class="skills__list-item btn btn--plain" data-aos="zoom-in" data-aos-delay="850">ElasticSearch</li>
+          <li class="skills__list-item btn btn--plain" data-aos="zoom-in" data-aos-delay="600">OpenTelemetry</li>
+          <li class="skills__list-item btn btn--plain" data-aos="zoom-in" data-aos-delay="750">Zabbix</li>
+          <li class="skills__list-item btn btn--plain" data-aos="zoom-in" data-aos-delay="800">Datadog</li>
+          <li class="skills__list-item btn btn--plain" data-aos="zoom-in" data-aos-delay="850">Icinga2</li>
         </ul>
       </section>
 
      <!--==================== CONTACT ME ====================-->
      <section class="contact section" id="contact">
-      <h2 class="section__title">Contact me</h2>
-      <span class="section__subtitle-cont">
-        If you wish to get in touch with me for vacancy, collaborative, or partnership proposals, please use the email address provided below. 
-        Please conduct all business inquiries in English as my German is still a work in progress.
+      <h2 class="section__title" data-aos="fade-up">Contact me</h2>
+      <span class="section__subtitle-cont" data-aos="fade-up" data-aos-delay="100">
+        Let's connect! I'm available for job opportunities, collaboration projects, and partnership discussions. Drop me a message below.
       </span>
 
       <div class="contact__container container grid">
-          <div>
+          <div class="contact__info" data-aos="fade-right" data-aos-delay="200">
 
               <div class="contact__information">
                   <i class="fas fa-envelope contact__icon"></i>
 
                   <div>
                       <h3 class="contact__title">Email</h3>
-                      <span class="contact__subtitle">pashadumenko35738@gmail.com</span>
+                      <span class="contact__subtitle">pavel.dumenko.tech@gmail.com</span>
                   </div>
               </div>
 
@@ -376,18 +443,98 @@
 
                   <div>
                       <h3 class="contact__title">Location</h3>
-                      <span class="contact__subtitle">Berlin, Germany</span>
+                      <span class="contact__subtitle">Munich, Germany</span>
                   </div>
               </div>
 
           </div>
+
+          <form class="contact__form" action="https://api.web3forms.com/submit" method="POST" data-aos="fade-left" data-aos-delay="200">
+            <!-- Web3Forms Access Key -->
+            <input type="hidden" name="access_key" value="79adfd24-6272-416e-8777-46a0e2c7cf36">
+            <!-- Redirect to same page after submission -->
+            <input type="hidden" name="redirect" value="https://pidumenk.de#contact">
+            <!-- Subject line for email -->
+            <input type="hidden" name="subject" value="New Contact Form Submission from Portfolio">
+
+            <div class="contact__form-group">
+              <label for="name" class="contact__form-label">Name</label>
+              <input type="text" id="name" name="name" class="contact__form-input" placeholder="Your name" required>
+            </div>
+
+            <div class="contact__form-group">
+              <label for="email" class="contact__form-label">Email</label>
+              <input type="email" id="email" name="email" class="contact__form-input" placeholder="your.email@example.com" required>
+            </div>
+
+            <div class="contact__form-group">
+              <label for="message" class="contact__form-label">Message</label>
+              <textarea id="message" name="message" class="contact__form-input contact__form-textarea" placeholder="Your message..." rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--outline contact__form-button">
+              <span class="button-text">Send Message</span>
+              <i class="fas fa-paper-plane button-icon"></i>
+            </button>
+
+            <div class="contact__form-status"></div>
+          </form>
       </div>
 
   </section>
 </main>
 
     <footer class="footer">
-      <a href="#top" class="link footer__link">Created By Pavel Dumenko</a>
+      <div class="footer__container">
+        <div class="footer__content">
+          <h3 class="footer__title">#pidumenk</h3>
+          <p class="footer__description">DevOps Engineer | SRE | Cloud Enthusiast</p>
+
+          <div class="footer__social">
+            <a href="https://github.com/pidumenk" class="footer__social-link" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://t.me/pidumenk" class="footer__social-link" title="Telegram">
+              <i class="fab fa-telegram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/pidumenk/" class="footer__social-link" title="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://medium.com/@pidumenk" class="footer__social-link" title="Medium">
+              <i class="fab fa-medium"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__links">
+          <div class="footer__links-group">
+            <h4 class="footer__links-title">Navigation</h4>
+            <ul class="footer__list">
+              <li><a href="#qualification" class="footer__link">Qualification</a></li>
+              <li><a href="#achievements" class="footer__link">Achievements</a></li>
+              <li><a href="#certifications" class="footer__link">Certifications</a></li>
+              <li><a href="#skills" class="footer__link">Skills</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__links-group">
+            <h4 class="footer__links-title">Contact</h4>
+            <ul class="footer__list">
+              <li><a href="mailto:pavel.dumenko.tech@gmail.com" class="footer__link">Email Me</a></li>
+              <li><a href="#contact" class="footer__link">Contact Form</a></li>
+              <!-- TODO: Replace href="#" with href="./assets/CV.pdf" when CV is ready -->
+              <li><a href="#" class="footer__link footer__cv-link">Download CV</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__copy">
+        <p>&copy; 2025 Pavel Dumenko. All rights reserved.</p>
+        <a href="#top" class="footer__back-top">
+          <i class="fas fa-arrow-up"></i> Back to Top
+        </a>
+      </div>
     </footer>
 
     <div class="scroll-container">
@@ -398,6 +545,8 @@
     </div>
     </div>
 
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>
