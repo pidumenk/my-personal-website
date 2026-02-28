@@ -62,6 +62,7 @@ i.fa-regular {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -70,6 +71,7 @@ body {
   color: var(--clr-fg);
   background: linear-gradient(135deg, var(--clr-bg) 0%, var(--clr-bg-alt) 100%);
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Scroll Progress Indicator */
