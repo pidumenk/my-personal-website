@@ -1298,6 +1298,11 @@ main {
     gap: .5rem;
   }
 
+  .qualification__line{
+    height: calc(100% + 2rem);
+    transform: translate(7px, -5px);
+  }
+
   .contact__information{
     margin-bottom: var(--mb-1);
   }
