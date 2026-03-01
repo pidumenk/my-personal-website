@@ -229,7 +229,7 @@ button {
   font-weight: 500;
   font-size: 0.9rem;
   /* text-transform: lowercase; */
-  transition: transform 0.2s ease-in-out;
+  transition: all 0.3s ease;
 }
 
 .btn--outline {
@@ -256,6 +256,16 @@ button {
   box-shadow: none;
 }
 
+.btn--outline:focus:not(:focus-visible) {
+  color: var(--clr-primary);
+  background-color: transparent;
+}
+
+.btn--outline:focus-visible {
+  outline: 2px solid var(--clr-primary);
+  outline-offset: 2px;
+}
+
 .btn--outline:before {
   content: "";
   position: absolute;
@@ -265,7 +275,7 @@ button {
   left: 0;
   top: 0;
   z-index: -1;
-  transition: right 0.2s ease-in-out;
+  transition: right 0.3s ease;
 }
 
 .btn--outline:hover::before,
@@ -854,10 +864,10 @@ main {
   display: flex;
   align-items: center;
   gap: 0.5em;
-  font-size: 1.1rem;
-  font-weight: 400;
+  font-size: 1.3rem;
+  font-weight: 500;
   cursor: pointer;
-  padding: 0.5em 0;
+  padding: 0.8em 1em;
   transition: all 0.3s ease;
   background: transparent;
   color: var(--clr-fg);
@@ -870,7 +880,7 @@ main {
 }
 
 .qualification__icon{
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   transition: transform 0.3s ease;
 }
 
@@ -881,29 +891,33 @@ main {
 .qualification__data{
   display: grid;
   grid-template-columns: 1fr max-content 1fr;
-  column-gap: 1.5rem;
+  column-gap: 2rem;
+  margin-bottom: 3rem;
 }
 
 .qualification__title{
-  font-size: var(--normal-font-size);
+  font-size: 1.15rem;
   font-weight: var(--font-semi-bold);
+  margin-bottom: 0.5rem;
 }
 
 .qualification__subtitle{
   display: inline-block;
-  font-size: var(--small-font-size);
+  font-size: 1rem;
   margin-bottom: var(--mb-1);
+  color: var(--clr-fg);
 }
 
 .qualification__calendar{
-  font-size: var(--smaller-font-size);
-  color: var(--text-color-light);
+  font-size: 0.9rem;
+  color: var(--clr-fg);
+  opacity: 0.8;
 }
 
 .qualification__rounder{
   display: inline-block;
-  width: 13px;
-  height: 13px;
+  width: 16px;
+  height: 16px;
   background: var(--clr-primary-gradient);
   border-radius: 50%;
   box-shadow: 0 0 10px var(--clr-primary);
@@ -922,9 +936,9 @@ main {
 .qualification__line{
   display: block;
   width: 2px;
-  height: 100%;
+  height: calc(100% + 3rem);
   background: var(--clr-primary-gradient);
-  transform: translate(6px, -7px);
+  transform: translate(7px, -8px);
   box-shadow: 0 0 5px var(--clr-primary);
 }
 

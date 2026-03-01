@@ -1,9 +1,9 @@
-// Initialize AOS Animation Library
+// Initialize AOS Animation Library with faster settings
 AOS.init({
-	duration: 800,
-	easing: 'ease-in-out',
+	duration: 500,  // Reduced from 800ms to 500ms for faster animations
+	easing: 'ease-out',
 	once: true,
-	offset: 100
+	offset: 50  // Reduced from 100 to trigger animations earlier
 });
 
 // Initialize Typed.js for typing animation
@@ -162,6 +162,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 				block: 'start'
 			});
 		}
+	});
+});
+
+// Remove focus from buttons after clicking to prevent persistent blue highlighting
+document.querySelectorAll('.btn').forEach(button => {
+	button.addEventListener('click', function() {
+		this.blur();
 	});
 });
 
