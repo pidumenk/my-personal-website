@@ -371,7 +371,7 @@ main {
 
 .about {
   flex-direction: column;
-  margin-top: 3em;
+  margin-top: 1.5em;
 }
 
 .about__name {
@@ -383,7 +383,7 @@ main {
 
 .about__role {
   min-height: 2.5rem;
-  margin-top: 1.2em;
+  margin-top: 0.8em;
 }
 
 .about__desc {
@@ -397,12 +397,12 @@ main {
 
 .about__desc,
 .about__contact {
-  margin-top: 2.4em;
+  margin-top: 1.5em;
 }
 
 .about__contact {
   flex-direction: column;
-  gap: 2em;
+  gap: 1.5em;
   width: 100%;
   max-width: 600px;
 }
@@ -936,7 +936,7 @@ main {
 .qualification__line{
   display: block;
   width: 2px;
-  height: calc(100% + 3rem);
+  height: calc(100% + 2.5rem);
   background: var(--clr-primary-gradient);
   transform: translate(7px, -8px);
   box-shadow: 0 0 5px var(--clr-primary);
@@ -1366,11 +1366,15 @@ main {
   }
 
   h1 {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
   }
 
   .section__title {
-    font-size: 2.2rem;
+    font-size: 2rem;
+  }
+
+  .about {
+    margin-top: 1em;
   }
 
   .about__desc {
@@ -1378,8 +1382,21 @@ main {
     max-width: 800px;
   }
 
+  .about__role {
+    margin-top: 0.6em;
+  }
+
+  .about__desc,
+  .about__contact {
+    margin-top: 1.2em;
+  }
+
+  .about__contact {
+    gap: 1.2em;
+  }
+
   .home__blob {
-    width: 280px;
+    width: 260px;
   }
 
   .qualification__button {
