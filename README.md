@@ -1,25 +1,52 @@
 # My Personal Website
 
-A simple website was built using such technologies like HTML, CSS and JavaScript.
+A simple personal website built using HTML, CSS, and JavaScript.
 
-The website is hosted on AWS services (S3, Route53 and CloudFront). To upload any changes in automatic way, GitHub Actions are currently being used. 
+🚀 **Current Hosting:** The website is now hosted using **GitHub Pages**, providing a simple and fully integrated deployment directly from this repository.
 
-# GitHub Action to Sync S3 Bucket
 
-This simple action uses the vanilla AWS CLI to sync a directory (either from your repository or generated during your workflow) with a remote S3 bucket.
+## 🌐 Deployment (GitHub Pages)
 
-# Usage
+The site is automatically deployed via **GitHub Pages**. Any changes pushed to the `main` branch are published automatically.
 
-**`workflow.yml`** **Example**
+### ⚙️ How it works
 
-Place in a `.yml` file such as this one in your `.github/workflows` folder. 
+- The website is served directly from the repository (e.g., `main` branch or `/docs` folder)
+- No external infrastructure or manual deployment steps are required
+- GitHub Pages provides built-in **HTTPS**, **CDN**, and caching
 
-*The following example includes optimal defaults for a public static website:*
+---
 
-* `--acl public-read` makes your files publicly readable (make sure your bucket settings are also set to public).
-* `--follow-symlinks` won't hurt and fixes some weird symbolic link problems that may come up.
-* Most importantly, `--delete` permanently deletes files in the S3 bucket that are not present in the latest version of your repository/build.
-* **Optional tip:** If you're uploading the root of your repository, adding `--exclude '.git/*'` prevents your `.git` folder from syncing, which would expose your source code history if your project is closed-source. (To exclude more than one pattern, you must have one `--exclude` flag per exclusion. The single quotes are also important!)
+### 🌍 Custom Domain (Route53)
+
+A custom domain is configured using **AWS Route53**:
+
+- **A records** point the root domain to GitHub Pages IP addresses
+- **CNAME record** maps the `www` subdomain to the GitHub Pages domain (e.g., `<username>.github.io`)
+- A `CNAME` file in the repository ensures GitHub Pages uses the custom domain
+
+This setup allows the site to be accessible via: https://pidumenk.de while still being hosted on GitHub Pages.
+
+## ⚙️ Previous Implementation (AWS S3 + CloudFront)
+
+> ⚠️ This section is kept for reference in case of reverting back to AWS-based hosting.
+
+Previously, the website was hosted using AWS services:
+- **S3** (static hosting)
+- **CloudFront** (CDN)
+- **Route53** (DNS)
+
+Deployment was automated using GitHub Actions and the AWS CLI.
+
+### GitHub Action to Sync S3 Bucket
+
+This action uses the AWS CLI to sync a local directory with an S3 bucket.
+
+### Usage
+
+**`workflow.yml` Example**
+
+Place this file in `.github/workflows/`:
 
 ```yaml
 name: Upload Website
@@ -48,18 +75,33 @@ jobs:
         AWS_REGION: 'us-west-1'   # optional: defaults to us-east-1
         SOURCE_DIR: 'public'      # optional: defaults to entire repository
 ```
-# Configuration
+### 📝 Notes
 
-The following settings must be passed as environment variables as shown in the example. Sensitive information, especially `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`, should be set as encrypted secrets in setting of your GitHub repository — otherwise, they'll be public to anyone browsing your repository's source code and CI logs.
+- `--acl public-read` → Ensures files are publicly accessible  
+- `--follow-symlinks` → Prevents issues with symbolic links  
+- `--delete` → Removes outdated files from the bucket  
+- `--exclude '.git/*'` → Prevents exposing repository history  
 
-For more details, please, refer to the [S3-Sync](https://github.com/marketplace/actions/s3-sync).
+---
 
-## Preview
+### ⚙️ Configuration
 
-![](https://github.com/pidumenk/my-personal-website/blob/master/Demo.gif)
+Sensitive credentials must be stored as **GitHub repository secrets**:
 
-[Live Version](https://pidumenk.de)
+- `AWS_ACCESS_KEY_ID`
+- `AWS_SECRET_ACCESS_KEY`
 
-## License
+📖 For more details, see:  
+https://github.com/marketplace/actions/s3-sync
 
-[MIT](https://choosealicense.com/licenses/mit/)
+---
+
+### 🌍 Live Version
+
+👉 https://pidumenk.de
+
+---
+
+### 📄 License
+
+MIT
