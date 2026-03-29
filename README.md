@@ -44,9 +44,9 @@ This action uses the AWS CLI to sync a local directory with an S3 bucket.
 
 ### Usage
 
-**`workflow.yml` Example**
+**`workflow.yaml` Example**
 
-Place this file in `.github/workflows/`:
+Place this file in `.github/workflows/workflow.yaml`:
 
 ```yaml
 name: Upload Website
@@ -67,7 +67,7 @@ jobs:
     - uses: actions/checkout@master
     - uses: jakejarvis/s3-sync-action@master
       with:
-        args: --acl public-read --follow-symlinks --delete
+        args: --acl public-read --follow-symlinks --delete --exclude '.git*/*' --exclude 'README.md' --exclude 'LICENSE'
       env:
         AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
